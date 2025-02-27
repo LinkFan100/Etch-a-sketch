@@ -1,0 +1,11 @@
+.mainDiv{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.gridItem{
+    flex: 1 0 20%; 
+}
+.gridItem:hover{
+    background-color: blue;
+}
