@@ -6,7 +6,3 @@
 .gridItem{
     flex: 1 0 20%; 
 }
-.gridItem:hover{
-    background-color: blue;
-    
-}
