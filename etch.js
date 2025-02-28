@@ -14,14 +14,17 @@ function divCreate(divsNum,mainDivClass){
     }
     
 }
-divCreate(16,".mainDiv");
+function getRandomNumber() {
+    min = Math.ceil(0);
+    max = Math.floor(255);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+divCreate(16,".mainDiv");;
 const gridItem = document.querySelectorAll(".gridItem");
 gridItem.forEach(i => {
-    i.addEventListener("mousemove",function(event){
-        i.style.backgroundColor = "blue";
+    i.addEventListener("mouseover",function(event){
+        i.style.backgroundColor = `rgb(${getRandomNumber()},${getRandomNumber()},${getRandomNumber()})`;
+        
     })
-    i.addEventListener("mouseout",function(event){
-        i.style.backgroundColor = "white";
-    })
-    
+
 });
