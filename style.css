@@ -1,8 +1,39 @@
+
+body{
+    padding: 150px;
+    justify-items: center;
+}
+.tileBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.Btn input,button{
+    margin-bottom: 10px;   
+    
+}
+.Btn input{
+    width:30px;
+}
 .mainDiv{
     display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    max-width: 960px;
+    border: 1px solid black;
+    height: 512px;
+    width:512px;
+    /* justify-items: center; */
+    
+    
+
+    
 }
 .gridItem{
-    flex: 1 0 20%; 
+    flex: 0 1 0%;
+    
+    /* width: 10%;
+    height: 10%; */
+    
 }
