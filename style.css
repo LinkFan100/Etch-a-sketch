@@ -2,6 +2,7 @@
 body{
     padding: 150px;
     justify-items: center;
+    background-color: aqua;
 }
 .tileBtn{
     display: flex;
@@ -15,25 +16,15 @@ body{
     
 }
 .Btn input{
-    width:30px;
+    width:50px;
 }
 .mainDiv{
     display: flex;
     flex-flow: row wrap;
     max-width: 960px;
     border: 1px solid black;
-    height: 512px;
-    width:512px;
-    /* justify-items: center; */
-    
-    
-
-    
+    background-color: white   
 }
 .gridItem{
-    flex: 0 1 0%;
-    
-    /* width: 10%;
-    height: 10%; */
-    
+    flex: 0 0 0%;
 }
