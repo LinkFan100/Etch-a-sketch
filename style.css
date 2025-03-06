@@ -2,7 +2,7 @@
 body{
     padding: 150px;
     justify-items: center;
-    background-color: aqua;
+    background-color: red;
 }
 .tileBtn{
     display: flex;
@@ -22,9 +22,8 @@ body{
     display: flex;
     flex-flow: row wrap;
     max-width: 960px;
-    border: 1px solid black;
+    max-height:960px;
+    
     background-color: white   
 }
-.gridItem{
-    flex: 0 0 0%;
-}
+

@@ -12,13 +12,23 @@ function divCreate(divsNum,mainDivClass,paddingSize){
         console.error("No such class exist");
         return;
     }
-    const mainDivSize = divsNum+divsNum;
+    const mainDivSize = divsNum;
+    if(divsNum>960){
+        mainDiv.style.height = `${960}px`;
+    mainDiv.style.width = `${960}px`;
+    }else{
     mainDiv.style.height = `${mainDivSize}px`;
-    mainDiv.style.width = `${mainDivSize}px`;
+    mainDiv.style.width = `${mainDivSize}px`;}
     for(let i = 0;i<divsNum;i++){
         const divs = document.createElement("div");
         divs.style.border = '1px solid black';
-        divs.style.padding = `${paddingSize-1}px`
+        if(divsNum>960){
+      divs.style.height = `${(960/paddingSize)-2}px`
+        divs.style.width = `${(960/paddingSize)-2}px`
+        }
+        else
+        {divs.style.height = `${paddingSize-2}px`
+        divs.style.width = `${paddingSize-2}px`}
         divs.classList.add("gridItem");
         mainDiv.appendChild(divs);
     }
@@ -56,7 +66,12 @@ const gridItem = document.querySelectorAll(".gridItem");
 gridItem.forEach(i => {
     i.addEventListener("mouseover",function(event){
         i.style.backgroundColor = `rgb(${getRandomNumber()},${getRandomNumber()},${getRandomNumber()})`;
-        // i.style.opacity = "0.1";
+    
+        if(i.style.opacity!="0"){
+        i.style.opacity = (parseFloat(i.style.opacity) || 1) - 0.1;}
+        
+        
+    
     })
 
 });}
